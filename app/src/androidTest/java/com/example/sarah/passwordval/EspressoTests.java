@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.clearText;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
@@ -29,6 +30,8 @@ public class EspressoTests {
         onView(withId(R.id.editText)).perform(typeText("rooo1234oooof"));
         onView(withId(R.id.button)).perform(click());
         onView(withId(R.id.textView)).check(matches(withText("This password is too weak")));
+
+        onView(withId(R.id.editText)).perform(clearText());
 
         onView(withId(R.id.editText)).perform(typeText("ROOO1234OOOOF"));
         onView(withId(R.id.button)).perform(click());
