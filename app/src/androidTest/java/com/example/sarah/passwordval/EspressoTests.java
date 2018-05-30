@@ -25,5 +25,5 @@ public class EspressoTests {
         // verify the text in the display is the message it's supposed to be.
 
     }
-    
+
 }
